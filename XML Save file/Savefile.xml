@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <Savefile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <name>lol</name>
-  <movementSpeed>0</movementSpeed>
-  <skillpower>0</skillpower>
-  <agility>0</agility>
-  <strength>0</strength>
+  <name>janne</name>
+  <movementSpeed>1</movementSpeed>
+  <health>1</health>
 </Savefile>
