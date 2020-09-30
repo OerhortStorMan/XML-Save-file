@@ -12,8 +12,7 @@ namespace XML_Save_file
 
         static void Main(string[] args)
         {
-            Savefile char;
-
+           
             System.Console.WriteLine("Välkommen till 'skapa din egna kock'-spelet.");
 
             bool correctInput = false;
@@ -27,7 +26,7 @@ namespace XML_Save_file
                 if (createOrOpenAnswer == "a")
                 {
                     CharacterCreator();
-                    char = OpenCharacter();
+                    OpenCharacter();
                     correctInput = true;
                 }
                 else if (createOrOpenAnswer == "b")
@@ -53,7 +52,7 @@ namespace XML_Save_file
             
             System.Console.WriteLine("Hur mycket movement speed?");
             string movementInput = Console.ReadLine();
-            //här så kan jag bool success om jag vill och se så det blir rätt men orkar inte
+            //här så kan jag bool success till tryparsen om jag vill och se så det blir rätt men orkar inte
             int.TryParse(movementInput, out int movementInt);
             player1.movementSpeed = movementInt;
 
@@ -67,15 +66,13 @@ namespace XML_Save_file
             
         }
 
-        static Savefile OpenCharacter()
+        static void OpenCharacter()
         {
             
             FileStream Savefile = File.OpenRead("Savefile.xml");
 
             Savefile player1 = (Savefile) serializer.Deserialize(myFile);
-
-            return player1;
-
+            
             //skriv xml info i console
         }
     }
